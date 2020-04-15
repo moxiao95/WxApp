@@ -1,0 +1,27 @@
+.class-list {
+	position: absolute;
+	top: 0rpx;
+	left: 0rpx;
+	width: 148rpx;
+	color: #fff;
+	background: #000;
+	border-right: 2rpx solid #ccc;
+}
+.class-list-item {
+	width: 148rpx;
+	height: 148rpx;
+	color: #fff;
+}
+
+.class-content {
+	position: absolute;
+	top: 0;
+	left: 150rpx;
+	background: #2c2c;
+	white-space: nowrap;
+}
+.class-content-item {
+	display: inline-block;
+	width: 100rpx;
+	height: 100rpx;
+}
