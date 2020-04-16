@@ -1,26 +1,147 @@
 /**index.wxss**/
-
-.userinfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* 头部 */
+.index-head {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 750rpx;
+	height: 150rpx;
+	background: rgb(240, 96, 86);
+}
+.index-title {
+	height: 40rpx;
+	color: #fff;
+	font-size: 30rpx;
+	line-height: 40rpx;
+	margin: 100rpx 0 0 30rpx;
 }
 
-.userinfo-avatar {
-    width: 128rpx;
-    height: 128rpx;
-    margin: 20rpx;
-    border-radius: 50%;
+/* 搜索 */
+.index-search {
+	position: fixed;
+	top: 150rpx;
+	left: 0;
+	width: 750rpx;
+	height: 130rpx;
+	background: rgb(208, 160, 248);
+	color: rgb(240, 224, 224);
+}
+.search-image {
+	float: left;
+	width: 100rpx;
+	height: 100rpx;
+	border-radius: 50%;
+	margin: 15rpx 30rpx;
+}
+.search-link {
+	float: left;
+	width: 450rpx;
+	height: 80rpx;
+	background: rgb(245, 242, 242);
+	border-radius: 15rpx;
+	margin: 25rpx 10rpx;
+}
+.search-link-img {
+	float: left;
+	width: 50rpx;
+	height: 50rpx;
+	margin: 15rpx;
+}
+.search-link-text {
+	float: left;
+	height: 50rpx;
+	margin-top: 15rpx;
+	color: #2c2c2c;
+}
+.index-page-news {
+	float: right;
+	width: 70rpx;
+	height: 100rpx;
+	margin: 15rpx 25rpx 0 0;
+}
+.page-news-img {
+	width: 50rpx;
+	height: 50rpx;
+	margin: 5rpx 0 0 10rpx;
+}
+.page-news-title {
+	width: 70rpx;
+	height: 30rpx;
+	font-size: 24rpx;
+	line-height: 30rpx;
+	text-align: center;
+	margin-top: -5rpx;
 }
 
-.userinfo-nickname {
-    color: #aaa;
+/* 内容 */
+.index-page {
+	padding-top: 280rpx;
 }
 
-.usermotto {
-    margin-top: 200px;
+/* 轮播 */
+.page-swiper {
+	width: 690rpx;
+	margin-left: 30rpx;
+}
+.swiper-items {
+	border-radius: 15rpx;
 }
 
-.user-motto {
-    display: block;
+/* 分类 */
+.index-page-class {
+	width: 690rpx;
+	height: 240rpx;
+	margin: 10rpx 30rpx;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.page-class-item {
+	width: 120rpx;
+	height: 120rpx;
+}
+.class-item-img {
+	width: 80rpx;
+	height: 80rpx;
+	margin-left: 20rpx;
+	background: rgba(191, 195, 241, 0.3);
+	border-radius: 50%;
+}
+.class-item-name {
+	width: 120rpx;
+	height: 40rpx;
+	font-size: 20rpx;
+	line-height: 20rpx;
+	text-align: center;
+}
+
+/* 头条 */
+.index-page-headlines {
+	width: 690rpx;
+	height: 50rpx;
+	margin: 5rpx 30rpx;
+	background: #fff;
+	border-radius: 3rpx;
+}
+.page-headlines-img {
+	float: left;
+	width: 40rpx;
+	height: 40rpx;
+	margin: 7rpx 0 0 20rpx;
+	background: rgb(238, 97, 97);
+	border-radius: 10rpx;
+}
+.page-headlines-text {
+	float: left;
+	height: 50rpx;
+	color: #2c2c2c;
+	font-size: 22rpx;
+	line-height: 50rpx;
+	margin: 0 30rpx;
+}
+.page-headlines-enter {
+	float: right;
+	width: 40rpx;
+	height: 40rpx;
+	margin: 7rpx 15rpx 0 0;
 }

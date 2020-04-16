@@ -1,54 +1,108 @@
 //index.js
+// 引入文件
+const urlList = require('../../utils/api.js');
+
 //获取应用实例
-const app = getApp()
+const app = getApp();
 
 Page({
-  data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
+	data: {
+		inputShowed: false,
+		inputVal: "",
+		background: ['blue', 'red', 'green'],
+		indicatorDots: true,
+		circular: true,
+		easingFunction: 'linear',
+		vertical: false,
+		autoplay: true,
+		interval: 2000,
+		duration: 500,
+		classList: [
+			{
+				img: '../../img/indexPage/bingxiang.png',
+				name: '冰箱',
+			},
+			{
+				img: '../../img/indexPage/reshuiqi.png',
+				name: '热水器',
+			},
+			{
+				img: '../../img/indexPage/jiadian.png',
+				name: '智能家电',
+			},
+			{
+				img: '../../img/indexPage/zhongyang.png',
+				name: '中央空调',
+			},
+			{
+				img: '../../img/indexPage/kongtiao.png',
+				name: '家用空调',
+			},
+			{
+				img: '../../img/indexPage/xiyiji.png',
+				name: '洗衣机',
+			},
+			{
+				img: '../../img/indexPage/dadian.png',
+				name: '厨卫大电',
+			},
+			{
+				img: '../../img/indexPage/xiaodian.png',
+				name: '厨房小电',
+			},
+			{
+				img: '../../img/indexPage/huanjing.png',
+				name: '环境电器',
+			},
+			{
+				img: '../../img/indexPage/shangpin.png',
+				name: '全部产品',
+			},
+		]
+	},
+
+    onLoad() {
+		var _this = this;
+        wx.request({
+			url: urlList.userPath,
+			method: 'GET',
+			data: {
+				userId: '00000001',
+			},
+			success: function({data}) {
+				
+			},
+			fail: function(err) {
+				console.log(err)
+			},
+		});
+    },
+
+	// 跳转搜索页面
+	jumpToSearchPage() {
+		wx.navigateTo({
+			url: '../search/search',
+		});
+	},
+	
+	// 跳转消息页面
+	jumpNewsPage() {
+		wx.navigateTo({
+			url: '../news/news',
+		});
+	},
+
+	// 跳转商品列表页面
+	jumpArticlePage() {
+		wx.navigateTo({
+			url: '../acticle/acticle',
+		});
+	},
+
+	// 跳转头条页面
+	jumpHeadlinesPage() {
+		wx.navigateTo({
+			url: '../headlines/headlines',
+		});
+	},
 })

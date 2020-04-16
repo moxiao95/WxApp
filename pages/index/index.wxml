@@ -1,13 +1,80 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!-- 头部 -->
+<view class="index-head">
+	<view class="index-title">首页</view>
+</view>
+<!-- 搜索 -->
+<view class="index-search" bindtap="jumpToSearchPage">
+	<image
+		class="search-image"
+		src="../../img/indexPage/dispatch.jpg"
+		mode="scaleToFill"
+	></image>
+	<view class="search-link">
+		<image
+			class="search-link-img"
+			src="../../img/indexPage/search.png"
+		></image>
+		<view class="search-link-text">请输入您想的商品</view>
+	</view>
+	<view
+		class="index-page-news"
+		bindtap="jumpNewsPage"
+	>
+		<image
+			class="page-news-img"
+			src="../../img/indexPage/news.png"
+			mode="scaleToFill"
+		></image>
+		<view class="page-news-title">消息</view>
+	</view>
+</view>
+<!-- 内容 -->
+<view class="index-page">
+	<!-- 轮播 -->
+    <swiper
+		class="page-swiper"
+		indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}"
+		circular="{{circular}}"
+		interval="{{interval}}"
+		duration="{{duration}}"
+		easing-function="{{easingFunction}}"
+	>
+        <block wx:for="{{background}}" wx:key="*this">
+			<swiper-item style="background: {{item}}" class="swiper-items">
+				<view class="swiper-item {{item}}"></view>
+			</swiper-item>
+        </block>
+	</swiper>
+	<!-- 分类 -->
+	<view class="index-page-class">
+		<view
+			class="page-class-item"
+			wx:for="{{classList}}"
+			wx:key="*this"
+			bindtap="jumpArticlePage"
+		>
+			<image
+				class="class-item-img"
+				src="{{item.img}}"
+				mode="scaleToFill"
+			></image>
+			<view class="class-item-name">{{item.name}}</view>
+		</view>
+	</view>
+	<!-- 头条 -->
+	<view class="index-page-headlines" bindtap="jumpHeadlinesPage">
+		<image
+			class="page-headlines-img"
+			src="../../img/indexPage/headlines.png"
+			mode="scaleToFill"
+		></image>
+		<view class="page-headlines-text">快来加入“省钱计划”！！！</view>
+		<image
+			class="page-headlines-enter"
+			src="../../img/indexPage/enter.png"
+			mode="scaleToFill"
+		></image>
+	</view>
 </view>

@@ -3,13 +3,18 @@
 		"pages/index/index",
 		"pages/car/car",
 		"pages/class/class",
-		"pages/user/user"
+		"pages/user/user",
+		"pages/news/news",
+		"pages/search/search",
+		"pages/acticle/acticle",
+		"pages/headlines/headlines"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
 		"navigationBarBackgroundColor": "#fff",
-		"navigationBarTitleText": "WeChat",
-		"navigationBarTextStyle": "black"
+		"navigationBarTitleText": "川川的测试小程序",
+		"navigationBarTextStyle": "black",
+		"navigationStyle": "custom"
 	},
 	"tabBar": {
 		"color": "#2c2c2c",
@@ -42,5 +47,6 @@
 				"selectedIconPath": "img/tabBarImg/user_select.png"
 			}
 		]
-	}
+	},
+	"sitemapLocation": "sitemap.json"
 }

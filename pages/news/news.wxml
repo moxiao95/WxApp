@@ -1,0 +1,11 @@
+<view>news</view>
+<view>news</view>
+<view>news</view>
+<view>news</view>
+<view>news</view>
+<view>news</view>
+<view>news</view>
+<view>news</view>
+<view>news</view>
+<view>news</view>
+<button bindtap="backLevel">返回</button>

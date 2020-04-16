@@ -1,23 +1,25 @@
 <!--class.wxml-->
-<scroll-view scroll-y='true' class='class-list'>
-	<view class='class-list-item' style='background: red;'>1</view>
-	<view class='class-list-item' style='background: green;'>2</view>
-	<view class='class-list-item' style='background: white;'>3</view>
-	<view class='class-list-item' style='background: yellow;'>4</view>
-	<view class='class-list-item' style='background: red;'>5</view>
-	<view class='class-list-item' style='background: red;'>6</view>
-	<view class='class-list-item' style='background: red;'>7</view>
-	<view class='class-list-item' style='background: block;'>8</view>
-	<view class='class-list-item' style='background: red;'>9</view>
-</scroll-view>
-<scroll-view scroll-x='true' class='class-content'>
-	<view class='class-content-item'>1</view>
-	<view class='class-content-item'>2</view>
-	<view class='class-content-item'>3</view>
-	<view class='class-content-item'>4</view>
-	<view class='class-content-item'>5</view>
-	<view class='class-content-item'>6</view>
-	<view class='class-content-item'>7</view>
-	<view class='class-content-item'>8</view>
-	<view class='class-content-item'>9</view>
-</scroll-view>
+<view class='class'>
+	<scroll-view scroll-y='true' class='class-list'>
+		<view class='class-list-item' style='background: red;'>1</view>
+		<view class='class-list-item' style='background: green;'>2</view>
+		<view class='class-list-item' style='background: white;'>3</view>
+		<view class='class-list-item' style='background: yellow;'>4</view>
+		<view class='class-list-item' style='background: red;'>5</view>
+		<view class='class-list-item' style='background: red;'>6</view>
+		<view class='class-list-item' style='background: red;'>7</view>
+		<view class='class-list-item' style='background: block;'>8</view>
+		<view class='class-list-item' style='background: red;'>9</view>
+	</scroll-view>
+	<scroll-view scroll-x='true' class='class-content'>
+		<view class='class-content-item'>1</view>
+		<view class='class-content-item'>2</view>
+		<view class='class-content-item'>3</view>
+		<view class='class-content-item'>4</view>
+		<view class='class-content-item'>5</view>
+		<view class='class-content-item'>6</view>
+		<view class='class-content-item'>7</view>
+		<view class='class-content-item'>8</view>
+		<view class='class-content-item'>9</view>
+	</scroll-view>
+</view>
