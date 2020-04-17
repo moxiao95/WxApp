@@ -121,7 +121,7 @@
 	height: 50rpx;
 	margin: 5rpx 30rpx;
 	background: #fff;
-	border-radius: 3rpx;
+	border-radius: 10rpx;
 }
 .page-headlines-img {
 	float: left;
@@ -144,4 +144,58 @@
 	width: 40rpx;
 	height: 40rpx;
 	margin: 7rpx 15rpx 0 0;
+}
+
+/* 新品 */
+.index-now-thing {
+	width: 690rpx;
+	height: 220rpx;
+	margin: 15rpx 30rpx;
+	background: #fff;
+	border-radius: 10rpx;
+}
+.now-thing-head {
+	width: 690rpx;
+	height: 50rpx;
+}
+.now-thing-title {
+	float: left;
+	height: 50rpx;
+	font-size: 26rpx;
+	line-height: 50rpx;
+	margin-left: 20rpx;
+}
+.now-thing-text {
+	float: left;
+	height: 30rpx;
+	font-size: 18rpx;
+	line-height: 30rpx;
+	margin: 10rpx 30rpx;
+	background: rgb(238, 39, 39);
+	color: #fff;
+	border-radius: 15rpx;
+	padding: 0 15rpx;
+}
+.now-thing-more {
+	float: right;
+	height: 50rpx;
+	font-size: 24rpx;
+	line-height: 50rpx;
+	margin-right: 10rpx;
+}
+.now-thing-img {
+	width: 690rpx;
+	height: 150rpx;
+	margin-top: 10rpx;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.now-thing-item {
+	width: 120rpx;
+	height: 120rpx;
+}
+.thing-item-img {
+	width: 120rpx;
+	height: 120rpx;
 }

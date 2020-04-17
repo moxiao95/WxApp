@@ -7,7 +7,9 @@
 		"pages/news/news",
 		"pages/search/search",
 		"pages/acticle/acticle",
-		"pages/headlines/headlines"
+		"pages/headlines/headlines",
+		"pages/details/details",
+		"pages/nowthing/nowthing"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

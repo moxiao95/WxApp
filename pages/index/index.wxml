@@ -77,4 +77,34 @@
 			mode="scaleToFill"
 		></image>
 	</view>
+	<!-- 新品 -->
+	<view class="index-now-thing">
+		<view class="now-thing-head" bindtap="jumpNowThingPage">
+			<view class="now-thing-title">新品尝鲜</view>
+			<view class="now-thing-text">新货抢先体验</view>
+			<image
+				class="page-headlines-enter"
+				src="../../img/indexPage/enter.png"
+				mode="scaleToFill"
+			></image>
+			<view class="now-thing-more">更多</view>
+		</view>
+		<view class="now-thing-img">
+			<view
+				class="now-thing-item"
+				wx:for="{{nowThingList}}"
+				wx:key="*this"
+			>
+				<image
+					class="thing-item-img"
+					src="{{item.img}}"
+					mode="scaleToFill"
+					data-id="{{item.id}}"
+					bindtap="jumpThingDetails"
+				></image>
+			</view>
+		</view>
+	</view>
+	<!-- 推荐 -->
+	<view class="index-recommend"></view>
 </view>

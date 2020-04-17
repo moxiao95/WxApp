@@ -58,7 +58,25 @@ Page({
 				img: '../../img/indexPage/shangpin.png',
 				name: '全部产品',
 			},
-		]
+		],
+		nowThingList: [
+			{
+				img: '../../img/indexPage/bingxiang.png',
+				id: 21031,
+			},
+			{
+				img: '../../img/indexPage/xiaodian.png',
+				id: 20231,
+			},
+			{
+				img: '../../img/indexPage/xiyiji.png',
+				id: 20431,
+			},
+			{
+				img: '../../img/indexPage/jiadian.png',
+				id: 20631,
+			},
+		],
 	},
 
     onLoad() {
@@ -103,6 +121,20 @@ Page({
 	jumpHeadlinesPage() {
 		wx.navigateTo({
 			url: '../headlines/headlines',
+		});
+	},
+
+	// 跳转新品尝鲜页面
+	jumpNowThingPage() {
+		wx.navigateTo({
+			url: '../nowthing/nowthing',
+		});
+	},
+
+	// 跳转详情
+	jumpThingDetails({target}) {
+		wx.navigateTo({
+			url: `../details/details?id=${target.dataset.id}`,
 		});
 	},
 })

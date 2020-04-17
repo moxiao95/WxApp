@@ -1,0 +1,16 @@
+<view>details</view>
+<view>details</view>
+<view>details</view>
+<view>details</view>
+<view>details</view>
+<view>details</view>
+<view>details</view>
+<view>details</view>
+<view>details</view>
+<view>details</view>
+<view>details</view>
+<view>details</view>
+<view>details</view>
+<view>details</view>
+<view>details</view>
+<button bindtap="backLevel">返回</button>
