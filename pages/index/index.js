@@ -77,18 +77,19 @@ Page({
 				id: 20631,
 			},
 		],
+		recommendList: [],
 	},
 
     onLoad() {
 		var _this = this;
         wx.request({
-			url: urlList.userPath,
+			url: urlList.allArticle,
 			method: 'GET',
-			data: {
-				userId: '00000001',
-			},
 			success: function({data}) {
-				
+				console.log(data.data)
+				_this.setData({
+					recommendList: data.data,
+				});
 			},
 			fail: function(err) {
 				console.log(err)
@@ -133,6 +134,7 @@ Page({
 
 	// 跳转详情
 	jumpThingDetails({target}) {
+		console.log(target)
 		wx.navigateTo({
 			url: `../details/details?id=${target.dataset.id}`,
 		});

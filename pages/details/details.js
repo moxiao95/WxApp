@@ -6,6 +6,7 @@ Page({
 	},
 
 	onLoad({id}) {
+		console.log(id)
 		this.loadDetails(id);
 	},
 

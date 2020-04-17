@@ -7,6 +7,7 @@
 	width: 750rpx;
 	height: 150rpx;
 	background: rgb(240, 96, 86);
+	z-index: 1;
 }
 .index-title {
 	height: 40rpx;
@@ -25,6 +26,7 @@
 	height: 130rpx;
 	background: rgb(208, 160, 248);
 	color: rgb(240, 224, 224);
+	z-index: 1;
 }
 .search-image {
 	float: left;
@@ -198,4 +200,50 @@
 .thing-item-img {
 	width: 120rpx;
 	height: 120rpx;
+}
+
+/* 推荐 */
+.index-recommend {
+	width: 690rpx;
+	margin: 15rpx 30rpx;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	color: #2c2c2c;
+}
+.index-recommend-item {
+	position: relative;
+	width: 340rpx;
+	height: 480rpx;
+	margin-bottom: 20rpx;
+}
+.recommend-item-img {
+	width: 340rpx;
+	height: 340rpx;
+}
+.recommend-item-name {
+	width: 340rpx;
+	height: 40rpx;
+	font-size: 26rpx;
+	line-height: 40rpx;
+	white-space: nowrap;
+	text-align: center;
+}
+.recommend-item-info {
+	width: 340rpx;
+	height: 40rpx;
+	font-size: 26rpx;
+	line-height: 40rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.recommend-item-price {
+	width: 340rpx;
+	height: 60rpx;
+	font-size: 30rpx;
+	line-height: 60rpx;
+	white-space: nowrap;
+	text-align: center;
+	color: red;
 }
